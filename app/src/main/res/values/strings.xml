@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Bday Card</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question_one">What is your Favourite color?</string>
+    <string name="q1_ans1">Chicken</string>
+    <string name="date_of_birth">Date Of Birth</string>
 </resources>
