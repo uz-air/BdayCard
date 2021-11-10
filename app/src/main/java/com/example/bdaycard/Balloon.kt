@@ -9,17 +9,19 @@ import android.view.MotionEvent
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.navigation.fragment.NavHostFragment
 
 
 class Balloon : AppCompatImageView, Animator.AnimatorListener, AnimatorUpdateListener {
     private val mAnimator: ValueAnimator by lazy { ValueAnimator() }
-    private val mListener: BalloonListener by lazy { this.context as BalloonListener }
+    private val mListener: BalloonListener by lazy {
+        ((this.context as MainActivity).supportFragmentManager.primaryNavigationFragment?.childFragmentManager?.primaryNavigationFragment) as BalloonListener }
     private var mPopped = false
 
     constructor(context: Context) : super(context)
     constructor(context: Context, color: Int, rawHeight: Int) : super(context) {
         setImageResource(R.drawable.balloon)
-       setColorFilter(color)
+        setColorFilter(color)
         val rawWidth = rawHeight / 2
         val dpHeight = pixelsToDp(rawHeight, context)
         val dpWidth = pixelsToDp(rawWidth, context)
