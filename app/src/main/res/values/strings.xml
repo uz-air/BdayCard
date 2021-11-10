@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">Bday Card</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="question_one">What is your Favourite color?</string>
+    <string name="question_two">What is your favourite food?</string>
+    <string name="question_one">What is your favourite place to travel?</string>
+    <string name="question_three">What is your favourite mode of travel?</string>
     <string name="q1_ans1">Chicken</string>
+    <string name="q1_ans2">Mutton</string>
+    <string name="q1_ans3">Egg</string>
+    <string name="q1_ans4">Cake</string>
+    <string name="q2_ans1">Hyderabad</string>
+    <string name="q2_ans2">Warangal</string>
+    <string name="q2_ans3">Mysore</string>
+    <string name="q2_ans4">Goa</string>
+    <string name="q3_ans1">Bike</string>
+    <string name="q3_ans2">Car</string>
+    <string name="q3_ans3">Bus</string>
+    <string name="q3_ans4">Train</string>
     <string name="date_of_birth">Date Of Birth</string>
     <string name="happy">Happy</string>
 </resources>
