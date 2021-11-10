@@ -8,6 +8,7 @@ import com.google.android.material.datepicker.DateValidatorPointBackward
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputLayout
+import java.util.*
 
 class QuestionnaireFragment : Fragment(R.layout.fragment_questionnaire) {
 
@@ -34,9 +35,16 @@ class QuestionnaireFragment : Fragment(R.layout.fragment_questionnaire) {
     }
 
     private fun getDatePicker(): MaterialDatePicker<Long> {
+        val calendarEnd: Calendar = Calendar.getInstance()
+        val year = 1999
+        val endMonth = 10
+        val endDate = 10
+        calendarEnd.set(year, endMonth - 1, endDate)
+        val maxDate = calendarEnd.timeInMillis
         val constraintsBuilder =
             CalendarConstraints.Builder()
-                .setValidator(DateValidatorPointBackward.now())
+                .setOpenAt(maxDate)
+                .setValidator(DateValidatorPointBackward.before(maxDate))
         return MaterialDatePicker.Builder.datePicker()
             .setTitleText("Select date")
             .setCalendarConstraints(constraintsBuilder.build())
