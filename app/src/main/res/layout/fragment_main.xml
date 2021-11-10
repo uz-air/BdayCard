@@ -5,7 +5,8 @@
     android:id="@+id/fragment_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/layoutBg">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_part"
@@ -18,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/vegan"
-            android:text="Happy"
+            android:text="@string/happy"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
             app:layout_constraintBottom_toTopOf="@id/videoView"

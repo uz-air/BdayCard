@@ -5,4 +5,5 @@
     <string name="question_one">What is your Favourite color?</string>
     <string name="q1_ans1">Chicken</string>
     <string name="date_of_birth">Date Of Birth</string>
+    <string name="happy">Happy</string>
 </resources>
